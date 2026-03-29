@@ -375,13 +375,15 @@ const initWhatsAppBooking = function () {
         return;
       }
 
-      // Create WhatsApp message (without phone)
-      const whatsappMessage = `Booking Request:
+      // Create WhatsApp message (polite format)
+      const whatsappMessage = `Hello, I would like to reserve a table at Grilli Restaurant.
+
 Name: ${name}
-People: ${persons}
 Date: ${date}
 Time: ${time}
-Message: ${message}`;
+Number of People: ${persons}
+
+Thank you.`;
 
       // Encode message for URL
       const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -396,6 +398,43 @@ Message: ${message}`;
 };
 
 /**
+ * DESKTOP TOP BAR CLICK FUNCTIONALITY
+ */
+
+const initDesktopTopBar = function () {
+  if (window.innerWidth >= 992) {
+    // Address: Open Google Maps
+    const topbarAddress = document.querySelector('.topbar-item address');
+    if (topbarAddress && topbarAddress.textContent.includes('Bandra')) {
+      topbarAddress.style.cursor = 'pointer';
+      topbarAddress.addEventListener('click', function () {
+        window.open(socialLinks.maps, '_blank');
+      });
+    }
+
+    // Phone: Use tel: protocol
+    const topbarPhone = document.querySelector('.topbar-item.link[href*="tel:"]');
+    if (topbarPhone) {
+      topbarPhone.addEventListener('click', function (e) {
+        // Let default tel: behavior work
+        e.preventDefault();
+        window.location.href = 'tel:+917718096969';
+      });
+    }
+
+    // Email: Use mailto: protocol
+    const topbarEmail = document.querySelector('.topbar-item.link[href*="mailto:"]');
+    if (topbarEmail) {
+      topbarEmail.addEventListener('click', function (e) {
+        // Let default mailto: behavior work
+        e.preventDefault();
+        window.location.href = 'mailto:jayrpatel04@gmail.com';
+      });
+    }
+  }
+};
+
+/**
  * Initialize all functionality
  */
 
@@ -405,4 +444,5 @@ window.addEventListener("load", function () {
   initWhatsAppBooking();
   initSidebarMenuClick();
   initScrollActiveMenu();
+  initDesktopTopBar();
 });

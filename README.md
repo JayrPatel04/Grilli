@@ -4,7 +4,7 @@ A modern and fully responsive restaurant website built using HTML, CSS, and Java
 Designed to provide a smooth user experience across all devices.
 
 ## Live Demo
-👉 https://JayrPatel04.github.io/Grilli/
+👉 https://grilli-delta.vercel.app/
 
 ## Features
 - Responsive design (mobile, tablet, desktop)

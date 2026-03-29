@@ -1660,7 +1660,6 @@ textarea.input-field {
   border-radius: var(--radius-circle);
   display: grid;
   place-items: center;
-  box-shadow: var(--shadow-1);
   transition: var(--transition-1);
   opacity: 0;
   visibility: hidden;

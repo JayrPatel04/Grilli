@@ -2278,40 +2278,6 @@ textarea.input-field {
   }
 
   /**
-   * SOCIAL MEDIA ICONS
-   */
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-
-  .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--gold-crayola);
-    border-radius: 50%;
-    color: var(--black);
-    font-size: 18px;
-    transition: var(--transition-1);
-    text-decoration: none;
-  }
-
-  .social-icon:hover {
-    transform: scale(1.1);
-    background-color: var(--white);
-  }
-
-  .social-icon ion-icon {
-    font-size: 18px;
-  }
-
-  /**
    * FOOTER
    */
 
@@ -2332,9 +2298,39 @@ textarea.input-field {
 
 }
 
+/**
+ * SOCIAL MEDIA ICONS
+ */
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
 
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--gold-crayola);
+  border-radius: 50%;
+  color: var(--black);
+  font-size: 18px;
+  transition: var(--transition-1);
+  text-decoration: none;
+}
 
+.social-icon:hover {
+  transform: scale(1.1);
+  background-color: var(--white);
+}
+
+.social-icon ion-icon {
+  font-size: 18px;
+}
 
 /**
  * responsive for larger than 1200px screen
